@@ -42,7 +42,7 @@ const LinkModal = ({ show, onClose, book }) => {
     const cleanDesc = book.description ? book.description.replace(/<[^>]*>/g, '') : '';
 
     const linkClass =
-        'flex items-center justify-center px-4 py-3 bg-paper dark:bg-dark-bg border border-line dark:border-dark-border rounded-xl hover:border-ink-300 dark:hover:border-ink-700 transition-all active:scale-95';
+        'flex items-center justify-center px-4 py-3 bg-white dark:bg-stone-100 border border-line dark:border-stone-300 rounded-xl hover:border-ink-400 transition-all active:scale-95';
 
     return (
         <div

@@ -187,7 +187,7 @@ function MyCollection({ session, scanHistory, onEditBook }) {
             {showStatsPanel && stats && (
                 <div className="bg-paper dark:bg-dark-bg rounded-xl p-4 space-y-3">
                     <div className="flex items-center justify-between">
-                        <h4 className="text-sm font-medium text-stone-900 dark:text-dark-textflex items-center gap-1.5">
+                        <h4 className="text-sm font-medium text-stone-900 dark:text-dark-text flex items-center gap-1.5">
                             <BarChart3 className="w-4 h-4" /> {i18n.t('collection.statsTitle')}
                         </h4>
                         <button onClick={() => setShowStatsPanel(false)}
@@ -223,7 +223,7 @@ function MyCollection({ session, scanHistory, onEditBook }) {
                                     <button
                                         key={a.name}
                                         onClick={() => { setDebouncedSearch(a.name); setShowStatsPanel(false); }}
-                                        className="text-xs px-2 py-1 bg-surface dark:bg-dark-cardrounded-lg
+                                        className="text-xs px-2 py-1 bg-surface dark:bg-dark-card rounded-lg
                                border border-line dark:border-dark-border
                                text-stone-700 dark:text-dark-text hover:border-ink-300 transition-colors"
                                     >
@@ -411,7 +411,7 @@ function MyCollection({ session, scanHistory, onEditBook }) {
                                     className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all
                     ${minRating === rf.value
                                         ? 'bg-foil-50 dark:bg-foil-900/20 text-foil-700 dark:text-foil-300 border border-foil-300 dark:border-foil-700'
-                                        : 'bg-surface dark:bg-dark-cardtext-gray-600 dark:text-gray-300 border border-line dark:border-dark-border hover:border-gray-300'
+                                        : 'bg-surface dark:bg-dark-card text-gray-600 dark:text-gray-300 border border-line dark:border-dark-border hover:border-gray-300'
                                     }`}
                                 >
                                     {rf.value && <Star className="w-3 h-3 fill-foil-600 text-foil-600" />}
@@ -439,7 +439,7 @@ function MyCollection({ session, scanHistory, onEditBook }) {
                     {stats?.totalBooks === 0 ? (
                         <>
                             <Library className="w-16 h-16 text-stone-300 dark:text-dark-border mx-auto mb-4" />
-                            <h3 className="font-display text-lg font-semibold text-stone-900 dark:text-dark-textmb-2">
+                            <h3 className="font-display text-lg font-semibold text-stone-900 dark:text-dark-text mb-2">
                                 {i18n.t('collection.startCollection')}
                             </h3>
                             <p className="text-stone-500 dark:text-dark-muted text-sm mb-6 max-w-xs mx-auto">
@@ -503,7 +503,7 @@ function MyCollection({ session, scanHistory, onEditBook }) {
                             )}
 
                             <div className="flex-1 min-w-0">
-                                <h4 className="text-sm font-medium text-stone-900 dark:text-dark-texttruncate">
+                                <h4 className="text-sm font-medium text-stone-900 dark:text-dark-text truncate">
                                     {book.title}
                                 </h4>
                                 {book.author && (
