@@ -815,7 +815,7 @@ function App() {
             </div>
         )}
         {syncing && (
-            <div className="bg-blue-500 text-white px-4 py-2 text-center text-sm">
+            <div className="bg-ink-700 text-white px-4 py-2 text-center text-sm">
               <div className="flex items-center justify-center gap-2">
                 <Loader2 className="w-4 h-4 animate-spin" />
                 <span>{i18n.t('offline.processing')}</span>
@@ -826,7 +826,7 @@ function App() {
             <div className="h-screen flex items-center justify-center bg-[#F4F2EC] dark:bg-dark-bg">
               <div className="text-center">
                 <Loader2 className="w-12 h-12 text-ink-600 dark:text-ink-400 animate-spin mx-auto mb-4"/>
-                <p className="text-gray-600 dark:text-gray-300">Loading Shelf Scan...</p>
+                <p className="text-stone-600 dark:text-dark-muted">Loading Shelf Scan...</p>
               </div>
             </div>
         ) : (
@@ -842,8 +842,8 @@ function App() {
                       <div className="max-w-6xl mx-auto p-8 pb-8 min-h-full">
                         {/* Description text */}
                         <div className="text-center mb-6 sm:mb-8">
-                          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 px-4">{i18n.t('scan.description')}</p>
-                          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 px-4">{i18n.t('scan.loginDescription')}</p>
+                          <p className="text-sm sm:text-base text-stone-600 dark:text-dark-muted px-4">{i18n.t('scan.description')}</p>
+                          <p className="text-sm sm:text-base text-stone-600 dark:text-dark-muted px-4">{i18n.t('scan.loginDescription')}</p>
 
                           {savingScan && (
                               <div className="mt-2 text-sm text-ink-600 dark:text-ink-400">
@@ -854,11 +854,11 @@ function App() {
 
                         {/* Match notification */}
                         {user && matchedCount > 0 && (
-                            <div className="mt-4 bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-700 rounded-lg p-4 mb-8">
+                            <div className="mt-4 bg-ink-50 dark:bg-ink-900/30 border border-ink-200 dark:border-ink-800 rounded-xl p-4 mb-8">
                               <div className="flex items-center justify-between">
                                 <div className="flex items-center gap-3">
-                                  <BookOpen className="w-5 h-5 text-emerald-600 dark:text-emerald-400"/>
-                                  <span className="font-semibold text-emerald-800 dark:text-emerald-200">
+                                  <BookOpen className="w-5 h-5 text-ink-700 dark:text-ink-300"/>
+                                  <span className="font-semibold text-ink-800 dark:text-ink-200">
                                     {i18n.t('scan.foundFromList', { count: matchedCount})}
                                   </span>
                                 </div>
@@ -876,8 +876,8 @@ function App() {
                                 ) : (
                                     <div className="flex flex-col items-center gap-3">
                                       <Upload className="w-16 h-16 text-ink-400 dark:text-ink-500"/>
-                                      <p className="text-lg text-gray-600 dark:text-gray-300">{i18n.t('upload.clickToUpload')}</p>
-                                      <p className="text-sm text-gray-400 dark:text-gray-500">{i18n.t('upload.fileLimit')}</p>
+                                      <p className="text-lg text-stone-600 dark:text-dark-muted">{i18n.t('upload.clickToUpload')}</p>
+                                      <p className="text-sm text-stone-400 dark:text-dark-muted">{i18n.t('upload.fileLimit')}</p>
                                     </div>
                                 )}
                               </div>
@@ -895,7 +895,7 @@ function App() {
                                   <div className="flex gap-3">
                                     <button
                                         onClick={takeNativePhoto}
-                                        className="flex-1 px-4 py-3 bg-ink-600 dark:bg-ink-500 text-white rounded-full transition-transform active:scale-95 font-semibold hover:bg-ink-700 dark:hover:bg-ink-600 flex items-center justify-center gap-2 text-sm sm:text-base"
+                                        className="flex-1 px-4 py-3 bg-ink-700 hover:bg-ink-800 dark:bg-ink-500 text-white rounded-full transition-transform active:scale-95 font-semibold hover:bg-ink-700 dark:hover:bg-ink-600 flex items-center justify-center gap-2 text-sm sm:text-base"
                                     >
                                       <Camera className="w-5 h-5 flex-shrink-0"/>
                                       <span className="whitespace-nowrap">{i18n.t('scan.takePhoto')}</span>
@@ -912,7 +912,7 @@ function App() {
 
                                   {/* Secondary row: Upload File */}
                                   <label className="block cursor-pointer">
-                                    <div className="w-full px-4 py-3 bg-gray-600 dark:bg-gray-700 text-white rounded-full font-semibold hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base">
+                                    <div className="w-full px-4 py-3 bg-surface dark:bg-dark-card border border-line dark:border-dark-border text-stone-700 dark:text-dark-text rounded-full font-semibold hover:bg-paper dark:hover:bg-dark-bg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base">
                                       <Upload className="w-5 h-5 flex-shrink-0"/>
                                       <span>{i18n.t('scan.uploadFile')}</span>
                                     </div>
@@ -931,7 +931,7 @@ function App() {
                                   <button
                                       onClick={scanBooks}
                                       disabled={loading}
-                                      className="px-8 py-3 bg-ink-600 dark:bg-ink-500 text-white rounded-full font-semibold hover:bg-ink-700 dark:hover:bg-ink-600 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed flex items-center gap-2 active:scale-95 transition-transform"
+                                      className="px-8 py-3 bg-ink-700 hover:bg-ink-800 dark:bg-ink-500 text-white rounded-full font-semibold hover:bg-ink-700 dark:hover:bg-ink-600 disabled:bg-gray-400 dark:disabled:bg-gray-600 disabled:cursor-not-allowed flex items-center gap-2 active:scale-95 transition-transform"
                                   >
                                     {loading ? (
                                         <>
@@ -953,7 +953,7 @@ function App() {
                                         setError('');
                                       }}
                                       disabled={loading}
-                                      className="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-full font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 disabled:bg-gray-100 dark:disabled:bg-gray-800 disabled:cursor-not-allowed transition-transform active:scale-95"
+                                      className="px-6 py-3 bg-paper dark:bg-dark-bg border border-line dark:border-dark-border text-stone-700 dark:text-dark-text rounded-full font-semibold hover:bg-line dark:hover:bg-dark-card disabled:opacity-50 disabled:cursor-not-allowed transition-transform active:scale-95"
                                   >
                                     {i18n.t('scan.clear')}
                                   </button>
@@ -970,17 +970,17 @@ function App() {
                         </div>
 
                         {/* Help Text Disclaimer */}
-                        <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-lg p-4 mb-6">
+                        <div className="bg-paper dark:bg-dark-bg border border-line dark:border-dark-border rounded-xl p-4 mb-6">
                           <div className="space-y-2">
                             <div className="flex items-start gap-2">
                               <span className="text-lg">📸</span>
-                              <p className="text-sm text-blue-800 dark:text-blue-200">
+                              <p className="text-sm text-stone-600 dark:text-dark-muted">
                                 {i18n.t('upload.photoTips')}
                               </p>
                             </div>
                             <div className="flex items-start gap-2">
                               <span className="text-lg">❓</span>
-                              <p className="text-sm text-blue-800 dark:text-blue-200">
+                              <p className="text-sm text-stone-600 dark:text-dark-muted">
                                 {i18n.t('upload.somethingWrongTryAgain')}
                               </p>
                             </div>
@@ -1019,7 +1019,7 @@ function App() {
                            overscrollBehavior: 'contain'
                          }}>
                       <div className="max-w-6xl mx-auto p-4 pb-8 sm:p-8 sm:pb-8">
-                        <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">{i18n.t('collection.title')}</h2>
+                        <h2 className="font-display text-3xl font-semibold text-stone-900 dark:text-dark-text mb-4">{i18n.t('collection.title')}</h2>
                         {user ? (
                             <LibraryTab session={session} scanHistory={scanHistory} onEditBook={handleEditCollectionBook} />
                         ) : (
@@ -1086,10 +1086,10 @@ function App() {
                             )
                         ) : (
                             <div className="bg-surface dark:bg-dark-card border border-line dark:border-dark-border rounded-2xl p-8 text-center">
-                              <p className="text-gray-600 dark:text-gray-300 mb-4">{i18n.t('account.signInToViewHistory')}</p>
+                              <p className="text-stone-600 dark:text-dark-muted mb-4">{i18n.t('account.signInToViewHistory')}</p>
                               <button
                                   onClick={() => setShowAuthModal(true)}
-                                  className="px-6 py-3 bg-ink-600 dark:bg-ink-500 text-white rounded-full transition-transform active:scale-95 font-semibold hover:bg-ink-700 dark:hover:bg-ink-600"
+                                  className="px-6 py-3 bg-ink-700 hover:bg-ink-800 dark:bg-ink-500 text-white rounded-full transition-transform active:scale-95 font-semibold hover:bg-ink-700 dark:hover:bg-ink-600"
                               >
                                 {i18n.t('profile.signIn')}
                               </button>
